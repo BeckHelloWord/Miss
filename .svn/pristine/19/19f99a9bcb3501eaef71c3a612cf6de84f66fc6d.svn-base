@@ -1,0 +1,144 @@
+@import "skin";
+.padding-content {
+    padding: 0 pxToRem(24)
+}
+
+
+/* 我的 */
+
+.home-index {
+    .index-top {
+        padding-top: pxToRem(36);
+        padding-bottom: pxToRem(36);
+        color: $white;
+        background-color: $red;
+    }
+    .index-top {
+        .user-name {
+            margin-bottom: pxToRem(30);
+            font-size: pxToRem(26);
+        }
+        .user-asset {
+            h3 {
+                font-size: pxToRem(24);
+                font-weight: normal;
+            }
+            p {
+                font-size: pxToRem(30);
+            }
+            span {
+                font-size: pxToRem(60);
+            }
+        }
+    }
+    .index-recharge {
+        padding-top: pxToRem(18);
+        padding-bottom: pxToRem(18);
+        background-color: $white;
+    }
+    .index-recharge {
+        .left {
+            line-height: 1.2;
+        }
+        .left p:first-child {
+            font-size: pxToRem(36);
+            color: $ft-1b2b3f;
+        }
+        .left p:last-child {
+            font-size: pxToRem(24);
+            color: $ft-999;
+        }
+        .right {
+            padding-top: pxToRem(5);
+        }
+        .right a {
+            float: left;
+            width: pxToRem(140);
+            height: pxToRem(60);
+            line-height: pxToRem(60);
+            font-size: pxToRem(30);
+            box-sizing: border-box;
+        }
+        .right a:first-child {
+            border: 1px solid $red;
+            color: $red;
+        }
+        .right a:last-child {
+            margin-left: 12px;
+            color: $white;
+            background-color: $yellow;
+        }
+    }
+}
+
+.set-list {
+    .module {
+        margin-top: pxToRem(20);
+        background-color: $white;
+    }
+    .module-item {
+        position: relative;
+        display: block;
+        height: pxToRem(96);
+        line-height: pxToRem(96);
+        font-size: pxToRem(32);
+        color: $ft-1b2b3f;
+    }
+    .module-item+.module-item {
+        border-top: 1px solid $ft-dedede;
+    }
+    .module-item>i:first-child {
+        width: pxToRem(56);
+        font-size: pxToRem(40);
+        color: $red;
+    }
+    .module-item i:last-child {
+        margin-left: pxToRem(20);
+        color: $ft-999;
+    }
+    .module-item i.icon-arrow {
+        font-size: pxToRem(22);
+        color: $graycolor;
+    }
+    .module-item .msg {
+        position: relative;
+        top: 50%;
+        min-width: 18px;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 2px;
+        margin: -11px 0 0 3px;
+        text-align: center;
+        font-size: pxToRem(20);
+        color: $white;
+        background-color: $yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+}
+
+.menu-msg {
+    position: relative;
+    padding-right: pxToRem(16);
+    font-size: pxToRem(36);
+}
+
+.menu-msg-num {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 2px;
+    margin-top: -20px;
+    font-size: pxToRem(20);
+    color: $white;
+    background-color: $yellow;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.set-btn {
+    @include btn;
+}

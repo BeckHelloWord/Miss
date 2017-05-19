@@ -1,0 +1,86 @@
+html {
+    font-size: 10px;
+}
+
+@media screen and (min-width:321px) and (max-width:374px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:414px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 22.5px;
+    }
+}
+
+@media screen and (min-width:750px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+$red:#b91a30; //默认红色
+$gary:#dbdbdb; //按钮无法点击灰色
+$garyFont:#c2c2c2; //按钮无法点击灰色文字
+$pink:#FFF8F8;
+$pinkLine:#EED9D9; //新手指引页的底色
+$spanPink:#FF5A58; // 新手指引标题分类两边菱形的颜色
+$navBorderBottom:#FF811B; //导航下border颜色
+$packetColor:#FD5B57; // 红包列表低色
+$aLink:#47a5e7; //重置密码a链接颜色
+$white:#fff; // 白色
+$black:#000; // 黑色
+$yellow:#ff811b; // 黄色
+$blue:#033b88; // 蓝色
+$fontgary:#a5a5a5; // 字体颜色
+$ft-1b2b3f:#1b2b3f; // 字体颜色
+$ft-999:#999; // 字体颜色
+$ft-dedede:#dedede; // 边框颜色
+$background:#edf0f3; // 页面背景颜色
+$graycolor:#c5c5c5;
+$uiWidth:375px; //设计稿的一半
+$img:100%;
+@function pxToRem($px) {
+    @return $px/11/2+rem;
+}
+
+@mixin btn {
+    //按钮
+    width: 94%;
+    margin: pxToRem(40) auto;
+    height: pxToRem(80);
+    line-height: pxToRem(80);
+    border: 0;
+    display: block;
+    color: $white;
+    background: $red;
+    font-size: pxToRem(32);
+    text-align: center;
+}
+
+@mixin btn-bottom {
+    //底部按钮
+    @include btn;
+    position: absolute;
+    left: 3%;
+    bottom: pxToRem(20);
+}

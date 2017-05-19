@@ -1,0 +1,404 @@
+input[type="button"] {
+    // -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(240, 240, 240, 0);
+}
+
+.clearfix {
+    &:before {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+.t_l {
+    text-align: left;
+}
+
+.t_c {
+    text-align: center;
+}
+
+.t_r {
+    text-align: right;
+}
+
+.left,
+.fl {
+    float: left;
+}
+
+.right,
+.fr {
+    float: right;
+}
+.help {
+    display: block;
+    font-size: 11px;
+    margin-top: 5px
+}
+
+.help.is-white {
+    color: #fff
+}
+
+.help.is-black {
+    color: #0a0a0a
+}
+
+.help.is-light {
+    color: #f5f5f5
+}
+
+.help.is-dark {
+    color: #363636
+}
+
+.help.is-primary {
+    color: #00d1b2
+}
+
+.help.is-info {
+    color: #3273dc
+}
+
+.help.is-success {
+    color: #23d160
+}
+
+.help.is-warning {
+    color: #ffdd57
+}
+
+.help.is-danger {
+    color: #ff3860
+}
+
+/* 首页 */
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+}
+
+.top {
+    height: 50px;
+    font-family: "Microsoft YaHei", "微软雅黑";
+    font-size: 14px;
+    line-height: 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: $red;
+    z-index: 9999
+}
+
+.top a {
+    color: #fff;
+}
+
+.top .logo {
+    position: absolute;
+    left: 0
+}
+
+.top .logousername {
+    padding-right: 14px
+}
+
+.top .logoImg {
+    height: 20px;
+    width: auto;
+    padding-left: 14px;
+}
+
+.loginImg {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #FFADAC;
+    overflow: hidden;
+    border: 2px solid #C74859;
+    padding: 4px;
+    box-sizing: border-box
+}
+
+.top .icon-caretLeft {
+    width: 50px;
+    height: 50px;
+    background-image: url(./assets/images/head_top_arr.png);
+    background-size: 13px 18px;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.main-title {
+    max-width: 60%;
+    margin-left: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: center;
+    color: #f6f6f6;
+    font-size: 18px;
+}
+
+.top .right-icon {
+    right: 0;
+    top: 0;
+    color: white;
+    text-align: center;
+    padding-right: 10px;
+    height: 50px;
+    display: block;
+    position: absolute;
+}
+
+.myFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    height: 44px;
+    border-top: 1px solid #dedede;
+    background: #fefefe;
+    ul {
+        li {
+            list-style-type: none;
+            width: 33.3333%;
+            height: 44px;
+            line-height: 44px;
+            border-left: 1px solid #dedede;
+            float: left;
+            text-align: center;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            color: $fontgary;
+        }
+        a:first-child {
+            li {
+                border-left: none
+            }
+        }
+        a.router-link-active {
+            li {
+                color: $red;
+            }
+        }
+    }
+}
+
+.myHeader {
+    position: fixed;
+    top: 0;
+    background: $blue;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    height: 44px;
+}
+
+// 避免 内容不够高度 下拉隐藏不封内容
+.mint-loadmore {
+    min-height: 100%;
+    // margin-top: 50px;
+}
+//横向转的硬币
+.loadingCoin{
+     margin: 0px auto;
+    width: 40px;
+    height: 40px;
+    background-image: url(./assets/images/loading-infeed.png);
+    animation:loadingCoinAni steps(1, start) 0.5s infinite alternate;
+    // background-position: -253px 0;
+    background-repeat: no-repeat;
+}
+@keyframes loadingCoinAni
+{
+0% {background-position: -80px 0 }
+16.777% {background-position: -40px 0}
+33.333% {background-position: -0px 0}
+50% {background-position: -120px 0}
+66.777% {background-position: -240px 0}
+83.333% {background-position: -200px 0}
+100% {background-position: -160px 0}
+}
+//竖向转的硬币
+.loadingCoin2{
+    margin: 5px auto;
+    width: 180px;
+    height: 180px;
+    background-image: url(./assets/images/loading-vertical.png);
+    animation:loadingCoinAni2 steps(1, start) 1s infinite alternate;
+    // background-position: -253px 0;
+    background-repeat: no-repeat;
+}
+@keyframes loadingCoinAni2
+{
+0% {background-position: - 360px 0}
+12.5% {background-position: -540px 0}
+25% {background-position: -0px 0}
+37.5% {background-position: -180px 0}
+50%  {background-position: -720px 0}
+62.5% {background-position:  -1260px 0}
+75% {background-position:  -1440px 0}
+87.5% {background-position: -900px 0}
+100% {background-position: -1080px 0}
+}
+
+.main-body {
+    height: 100%
+}
+
+body {
+    height: 100%
+}
+
+.mint-loadmore-content {
+    padding-top: 50px;
+}
+
+.richText {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    line-height: 2;
+    p{
+        white-space: normal;
+        word-break: break-all;
+    }
+    img{
+        max-width: 100%;
+    }
+    ul{
+        max-width: 100%;
+    }
+}
+
+.voucherList {
+    padding: 0!important;
+    height: 50%;
+    overflow: scroll;
+    ul {
+        border-radius: 5px;
+        display: block;
+        .voucherNone {
+            line-height: 44px;
+        }
+        li {
+            border-bottom: 1px solid #666;
+            margin: 0 20px;
+            display: block;
+            p {
+                display: block;
+                text-align: center;
+            }
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.defaultHead {
+    background: url("./assets/images/login.jpg") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.noData td:first-child {
+    text-indent: 0;
+    color: #666;
+    padding: 14rem 2rem 2rem 2rem;
+    height: 10rem;
+    text-align: center;
+    background: url(./assets/images/nodata.png) center 3rem no-repeat;
+    background-size: 14rem auto;
+}
+
+.recharge-all {
+    input {
+        color: #000;
+    }
+    .selBank .mint-cell-wrapper:after {
+        border: solid 2px #c8c8cd;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        content: " ";
+        top: 50%;
+        right: 20px;
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .selBank input {
+        color: #bcbcbc;
+    }
+    .selBank .on input {
+        color: #000;
+    }
+    .mint-cell-text,
+    .mint-cell-value {
+        font-size: pxToRem(28);
+    }
+    .page-part .mint-cell:first-child .mint-cell-wrapper {
+        background-image: none;
+    }
+    .page-part .mint-cell:last-child {
+        background-image: none;
+    }
+    .module-form .mint-cell-wrapper {
+        background-image: none;
+    }
+    .module-list .mint-cell-value {
+        color: #000;
+    }
+    //提现
+    .withdraw .canDraw .mint-cell-value input {
+        color: #b91a30;
+    }
+    .withdraw .rule .mint-cell-value {
+        color: #b91a30;
+        text-decoration: underline;
+    }
+    .withdraw .rule .mint-cell:last-child {
+        background: none;
+    }
+    .withdraw .rule .mint-cell-wrapper {
+        background-image: none;
+    }
+    .withdraw .mint-cell:last-child {
+        background-image: none;
+    }
+    .withdraw .amount .mint-cell-wrapper {
+        background-image: none;
+    }
+    .page-part .mint-cell:first-child .mint-cell-wrapper {
+        background: none;
+    }
+    .selCity .mint-cell-title {
+        width: 105px;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+    }
+}
+//已实名已绑卡未填支行，提示去完善银行卡信息，跳转到支行信息页面。
+.layerJump.layui-m-layercont{padding:10px 20px 30px;text-align:left;}
